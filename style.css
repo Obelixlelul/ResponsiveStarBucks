@@ -3,9 +3,14 @@
 * 
 {
     margin:0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-width: 585px;
 }
 
 section 
@@ -162,7 +167,6 @@ header ul li a {
 .sci li 
 {
     list-style: none;
-    /* background: blue; */
 }
 
 .sci li a
@@ -172,7 +176,6 @@ header ul li a {
     margin: 10px 0;
     transform: scale(0.6);
     filter: invert(1);
-    /* background: red; */
 }
 
 .circle
@@ -184,9 +187,22 @@ header ul li a {
     height: 100%;
     background: #017143;
     clip-path: circle(600px at right 850px);
+    transition: 0.1s;
 }
 
 /****************************************************** RESPONSIVE PART ********/
+
+
+@media(max-width: 1250px){
+    .circle
+    {
+        clip-path: circle(550px at right 850px); 
+        transition: 0.5s;
+    }
+}
+
+
+
 @media(max-width: 1000px)
 {
     header
@@ -283,15 +299,17 @@ header ul li a {
 
     .circle 
     {
-        clip-path: circle(400px at center bottom)
+        clip-path: circle(400px at center bottom);
+        transition: 1s;
     }
 
      .sci
     {
         background: #017143; 
-        right: 50px;
-        width: 10px;
+        right: 0px;
+        width: 50px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
     }
+    
 }
